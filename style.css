@@ -134,18 +134,13 @@
     background: none;
 }
 
+/* all similar styling codes  */
 
-/* about section style */
 section{
     padding: 100px 0;
 }
 
-
-.about  {
-    font-family: 'Kumbh Sans', sans-serif;
-}
-
-.about .title {
+section .title {
     position: relative;
     text-align: center;
     font-size: 40px;
@@ -155,9 +150,8 @@ section{
     font-family: 'Sen', sans-serif;
 }
 
-/* Evaulate with customers to apply or not (before-after part) */
 
- .about .title::before {
+ section .title::before {
     content: "";
     position: absolute;
     bottom: 0px;
@@ -168,19 +162,14 @@ section{
     transform: translateX(-50%);
 }
 
-/* .about .title::after {
-    content: "Kimiz Biz";
-    position: absolute;
-    bottom: -12px;
-    left: 50%;
-    font-size: 20px;
-    color: rgb(17, 162, 219);
-    padding:5px;
-    background: #fff;
-    transform: translateX(-50%);
-}  */
 
-.about .about-content {
+/* about section style */
+
+.about, .photography  {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.about .about-content, .photo-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -221,8 +210,81 @@ section{
 }
 
 
+/* photography section */
 
-/* responsive media query  */
+.photography {
+    color: #fff;
+    background: #111;
+}
+
+.photography .photo-content .card {
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor:pointer;
+    transition: all 0.3 ease;
+}
+
+.photography .photo-content .card:hover {
+    background:rgb(1, 24, 32)
+}
+
+.photography .photo-content .card .box {
+    transition: all 0.3 ease;
+}
+
+.photography .photo-content .card:hover .box {
+    transform: scale(1.05);
+}
+
+.photography .photo-content .card .box .transparent {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 6px;
+    transition: all 0.3 ease;
+}
+
+.photography .photo-content .card .box .one:hover {
+    content:url('img/photography/u6.jpg');
+    width: 100%;
+    transition: all 0.3 ease;
+}
+
+.photography .photo-content .card .box .two:hover {
+    content:url('img/photography/d2.jpg');
+    width: 100%;
+    transition: all 0.3 ease;
+}
+
+.photography .photo-content .card .box .three:hover {
+    content:url('img/photography/m3.jpg');
+    width: 100%;
+    transition: all 0.3 ease;
+}
+
+
+/* .photography .photo-content .card .box #transparent-image{
+    background-image: url('img/photography/u3.jpg') no-repeat center;
+    height: 1250px;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+
+.photography .photo-content .card .box #transparent-image:hover {
+    background-image: url('img/photography/u4.jpg');
+} */
+
+.photography .photo-content .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+
+
+/* responsive media query  start */
 @media(max-width: 1300px){
     .home .max-width {
         margin-left:0;  
@@ -316,6 +378,11 @@ section{
         flex: 100%;
     }
 
+    .photography .photo-content .card {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+
 
 }
 
@@ -340,6 +407,12 @@ section{
     .home .home-content a{
         font-size: 20px;
     }
+
+    .photography .photo-content .card {
+        width: 100%;
+    }
+
+
 }
 
 @media (max-width:500px){
