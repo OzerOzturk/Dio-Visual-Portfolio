@@ -29,7 +29,8 @@
 
 .navbar.sticky{
     padding:15px 0;
-    background:rgb(1, 1, 167, 0.2) ;
+    background: rgb(14,58,84);
+    background: linear-gradient(90deg, rgba(14,58,84,1) 0%, rgba(75,184,237,1) 50%, rgba(14,58,84,1) 100%);
 }
 
 .navbar .max-width {
@@ -140,6 +141,18 @@ section{
     padding: 100px 0;
 }
 
+.about, .photography, .video  {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.about .about-content,
+.photography .photo-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
 section .title {
     position: relative;
     text-align: center;
@@ -164,18 +177,6 @@ section .title {
 
 
 /* about section style */
-
-.about, .photography  {
-    font-family: 'Kumbh Sans', sans-serif;
-}
-
-.about .about-content, .photo-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-
 
 .about .about-content .left{
     width: 45%;
@@ -281,6 +282,37 @@ section .title {
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
+
+/* video section style */
+
+.video #title-description {
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+
+
+  .video-row {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom:40px;
+    width: 100%;
+  }
+
+  .video-row .box {
+    display: flex;
+    flex-flow: column;
+    align-items:center;
+    width: 30%;
+  }
+
+ 
+
+ 
 
 
 
