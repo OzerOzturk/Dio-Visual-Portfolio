@@ -22,7 +22,6 @@
     z-index: 999;
     width: 100%;
     padding:30px 0;
-    /* background: rgb(1, 1, 167, 0.2); */
     font-family: 'Kumbh Sans', sans-serif;
     transition:  all 0.3s ease;
 }
@@ -141,7 +140,7 @@ section{
     padding: 100px 0;
 }
 
-.about, .photography, .video  {
+.about, .photography, .video, .connect-container, .signature  {
     font-family: 'Kumbh Sans', sans-serif;
 }
 
@@ -367,9 +366,130 @@ section .title {
   }
 
   
+/*   contact-iletisim section */
+
+.background {
+    position: relative;
+    display: flex;
+    margin:0;
+}
+
+.background video {
+    position: relative;
+    z-index:0;
+    object-fit: cover;
+    width: 100%;
+    height: 500px;
+    background-color: rgb(37, 37, 37,0.6);
+  }
+
+
+ .connect-container{
+    position: absolute;
+    z-index: 1;
+    top:0;
+    left:0;
+    display: flex;
+    margin: 100px 0 0px;
+    padding: 20px;
+    line-height: 30px;
+    color:white;
+    width: 60%;
+}
+
+.contact .connect-container .address{
+    width: 50%;
+    margin-right: 40px;
+    margin-top:70px;
+}
+
+.contact .connect-container .address h3{
+    font-size:1.6em;
+    padding: 10px;
+    margin-bottom: 4px;
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+
+.contact .connect-container .address a{
+    color:#fff;
+}
+
+
+.contact .connect-container .address .icon-type{
+   margin:5px;
+}
+
+
+.contact .connect-container .address .icon-type img{
+    margin-right: 10px;
+    width: 30px;
+}
+
+
+.contact .connect-container .address .icon-type span{
+    font-size: 1em;
+}
+
+
+.contact .connect-container .follow {
+    margin-left: 50px;
+    margin-top:70px;
+    width: 50%;
+}
 
 
 
+.contact .connect-container .follow  h3{
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.contact .connect-container .follow .social {
+    display: flex;
+    justify-content: center;
+}
+
+.contact .connect-container .follow .social li{
+    display: inline-block;
+    filter: contrast(120%);
+    margin-right: 30px;
+    transform: scale(0.9);
+    transition: 0.5s;
+    padding: 8px;
+}
+
+.contact .connect-container .follow .social li img {
+    width: 50px;
+}
+
+
+
+.contact .connect-container .follow .social li:hover {
+    transform: scale(0.9) translateY(-15px);
+}
+
+
+.contact .background .signature {
+    position: absolute;
+    z-index: 2;
+    bottom:10px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size:1em;
+    letter-spacing: 2px;
+}
+
+.contact .background .signature p {
+    color:#fff;
+}
+
+.contact .background .signature a {
+    color:#fff;
+}
 
 
 
@@ -379,6 +499,13 @@ section .title {
         margin-left:0;  
     }
 }
+
+@media(max-width: 1140px) {
+    .contact .connect-container .address {
+        min-width: 220px;
+    }
+}
+
 
 @media(max-width: 1104px){
     .about .about-content .left img {
@@ -507,11 +634,45 @@ section .title {
         margin-bottom: 60px;
       }
 
+      .contact .follow .social li img {
+        max-width: 38px;
+        }
+
 
 }
 
+@media (max-width: 700px) {
+    .address h3 {
+      font-size: 1.3em;
+    }
+  
+  
+    .icon-type span{
+      font-size: 0.9em;
+  }
 
+  .follow  h3 {
+    font-size: 1em;
+  }
+  
 
+  .contact .follow .social li {
+      display: block;
+      margin-right: 4px;
+  }
+
+  .contact .follow .social li img {
+    max-width: 30px;
+    }
+
+    .contact .connect-container .address .icon-type img {
+        width: 20px;
+  }  
+
+  .contact .connect-container .address a {
+    font-size: 0.9em;
+  }
+}
 
 @media (max-width:690px){
     .max-width {
@@ -554,4 +715,7 @@ section .title {
             font-size: 27px;
         }
 
-}
+        .connect-container .address .icon-type img {
+            width: 18px;
+        }
+    }
