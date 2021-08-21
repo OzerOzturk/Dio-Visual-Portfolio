@@ -146,7 +146,8 @@ section{
 }
 
 .about .about-content,
-.photography .photo-content {
+.photography .photo-content,
+.drone-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -265,54 +266,110 @@ section .title {
     transition: all 0.3 ease;
 }
 
-
-/* .photography .photo-content .card .box #transparent-image{
-    background-image: url('img/photography/u3.jpg') no-repeat center;
-    height: 1250px;
-    margin-top: 10px;
-    border-radius: 6px;
-}
-
-.photography .photo-content .card .box #transparent-image:hover {
-    background-image: url('img/photography/u4.jpg');
-} */
-
 .photography .photo-content .card .text {
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
 
+
+
 /* video section style */
 
-.video #title-description {
-    text-align: center;
-    margin-bottom: 30px;
-    letter-spacing: 2px;
+
+
+.drone-content .left{
+    width: 55%;
 }
 
 
+.drone-content .right {
+    width: 45%;
+}
+
+.drone-content .right img {
+    height: 500px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+    float: right;
+}
+
+
+.drone-content .left p {
+    text-align: justify;
+    line-height: 1.4;
+    font-size: 20px;
+}
+
+.drone-content .left p span {
+    color:rgba(18, 98, 129, 0.9);
+    text-shadow: 1px 1px 2px rgba(78, 199, 247, 0.5);
+}
+
+
+.video #title-description {
+    width: 80%; 
+    text-align: center;
+    border-bottom: 1px solid #000; 
+    line-height: 0.1em;
+    margin: 110px auto 60px;
+    letter-spacing: 4px;
+}
+
+
+.video #title-description span { 
+    background:#fff; 
+    padding:0 10px; 
+}
+
+
+ .video {
+     max-width: 1400px;
+     margin:auto;
+ }
+
+ .video-content {
+     margin-left: 40px;
+     margin-right: 40px;
+ }
 
   .video-row {
     display: flex;
-    flex-flow: row;
-    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom:40px;
-    width: 100%;
+    justify-content: space-around;
+    overflow: hidden;
   }
 
-  .video-row .box {
-    display: flex;
-    flex-flow: column;
-    align-items:center;
-    width: 30%;
+  .video-column {
+    min-width: 400px;
+    margin-bottom: 50px;
+    width: 45%;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: bottom;
+    margin-right: 20px;
   }
 
  
+  .video-column  iframe{
+      width: 100%;
+      height: auto;
+      min-height: 300px;
+  }
 
- 
+
+  .video-row .video-column p {
+      margin-top: 10px;
+      text-align: left;
+      color: rgb(0, 0, 0,0.6);
+  }
+
+  
+
+
+
 
 
 
@@ -329,12 +386,27 @@ section .title {
         width: 300px;
     }
 
+
+    .drone-content .right img {
+        height: 370px;
+        width: 300px;
+    }
+
+    .video-column  iframe{
+        width: 100%;
+        height: auto;
+    }
+
+
+
 }
 
 @media(max-width: 991px){
     .max-width {
         padding: 0 50px;
     }
+
+
 }
 
 @media(max-width: 947px ){
@@ -414,6 +486,26 @@ section .title {
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
+
+    .drone-content .column{
+        width: 100%;
+    }
+
+    .drone-content .right{
+        display: flex;
+        justify-content: center;
+        margin: 60px auto 0;
+    }
+
+    .drone-content .left {
+        flex: 100%;
+    }
+
+    .video-column {
+        width: 100%;
+        max-width: 650px;
+        margin-bottom: 60px;
+      }
 
 
 }
