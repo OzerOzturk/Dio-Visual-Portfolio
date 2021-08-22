@@ -8,6 +8,9 @@
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 .max-width {
     max-width: 1300px;
@@ -73,8 +76,6 @@
     cursor: pointer;
     display: none;
 }
-
-
 
 
 /* home-section */
@@ -248,13 +249,13 @@ section .title {
 }
 
 .photography .photo-content .card .box .one:hover {
-    content:url('img/photography/u6.jpg');
+    content:url('img/photography/u9.jpg');
     width: 100%;
     transition: all 0.3 ease;
 }
 
 .photography .photo-content .card .box .two:hover {
-    content:url('img/photography/d2.jpg');
+    content:url('img/photography/d1.jpg');
     width: 100%;
     transition: all 0.3 ease;
 }
@@ -696,6 +697,10 @@ section .title {
     .photography .photo-content .card {
         width: 100%;
     }
+
+    .contact .background .signature p {
+        font-size: 0.8em;
+    }   
 
 
 }
