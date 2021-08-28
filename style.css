@@ -8,8 +8,9 @@
     text-decoration: none;
 }
 
-html {
+html, body {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 .max-width {
@@ -405,15 +406,21 @@ section .title {
 }
 
 .contact .connect-container .address h3{
-    font-size:1.6em;
+    font-size:1.2em;
     padding: 10px;
-    margin-bottom: 4px;
-    letter-spacing: 4px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
     font-weight: 500;
 }
 
 .contact .connect-container .address a{
     color:#fff;
+}
+
+
+.contact .connect-container .address a:hover{
+    letter-spacing: 2px;
+    transition: all .3s ease-in;
 }
 
 
@@ -530,6 +537,12 @@ section .title {
         width: 100%;
         height: auto;
     }
+
+    .contact .connect-container .address .icon-type span{
+        font-size: 0.9em;
+    }
+    
+
 
 
 
@@ -658,6 +671,7 @@ section .title {
 }
 
 @media (max-width: 700px) {
+    
     .address h3 {
       font-size: 1.3em;
     }
@@ -750,4 +764,69 @@ section .title {
         .connect-container .address .icon-type img {
             width: 18px;
         }
+    }
+
+
+/* --mobile version-- */
+
+    @media (max-width:420px){
+        .video {
+            max-width: 380px;
+            margin:auto;
+        }
+       
+        .video-content {
+            margin-left: 15px;
+            margin-right: 5px;
+        }
+
+        .video-column {
+            min-width: 330px;
+            margin-bottom: 10px;
+          }
+        
+         
+          .video-column  iframe{
+              width: 100%;
+              height: auto;
+              min-height: 280px;
+          }
+        
+        
+          .video-row .video-column p {
+              margin-top: -40px;
+          }
+
+          .contact .connect-container .address{
+            width: 40%;
+            margin-right: 40px;
+            margin-top:-60px;
+        }
+        
+        .contact .connect-container .address h3{
+            font-size:1.1em;
+            padding: 5px;
+            margin-bottom: 0px;
+        }
+
+        .contact .connect-container .follow {
+            margin-left: -110px;
+            margin-top:100px;
+            width: 50%;
+        }
+
+        
+        .contact .connect-container .follow  h3{
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .contact .connect-container .follow .social li {
+            padding:2px;
+        }
+
+        .contact .connect-container .follow .social li img {
+            width: 35px;
+        }
+
     }
